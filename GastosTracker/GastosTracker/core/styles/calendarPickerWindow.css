@@ -1,0 +1,74 @@
+.calendarPickerWindow {
+    background-color: rgba(0, 0, 0, 25%);
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    align-items: center;
+    justify-items: center;
+}
+.dayExpenseCalendarPickerWindow {
+    display: none; /* grid */
+}
+.rangeExpenseCalendarPickerWindow {
+    display: none; /* grid */
+}
+.daySummaryCalendarPickerWindow {
+    display: none; /* grid */
+}
+.rangeSummaryCalendarPickerWindow {
+    display: none; /* grid */
+}
+.calendarPickerWindow .window {
+    background-color: #EEEEEE;
+    border-radius: 0.5rem;
+    display: grid;
+    justify-items: center;
+    width: 90%;
+    max-height: 95%;
+    overflow-y: auto;
+}
+.calendarPickerWindow .window h1 {
+    font-size: 1.125rem;
+    font-family: 'prompt-light';
+    color: #555555;
+    margin-top: 1rem;
+}
+.calendarPickerWindow .window h2 {
+    font-size: 1rem;
+    font-family: 'prompt-light';
+    color: #555555;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+.calendarPickerWindow .window input, .calendarPickerWindow .window button {
+    width: calc(90% - 1rem);
+    border: 0;
+    border-radius: 0.3125rem;
+    padding: 0.5rem;
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    font-family: 'prompt-light';
+    color: #555555;
+    background-color: #EEEEEE;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,25%);
+    outline: none;
+}
+.calendarPickerWindow .window button {
+    width: 90%;
+    box-shadow: unset;
+    background-color: #EBBAA4;
+}
+.calendarPickerWindow .window .doneButton {
+    margin-top: 1.75rem;
+    background-color: #F08A5D;
+    color: #EEEEEE;
+}
+.calendarPickerWindow .window .cancelButton {
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+    background-color: #A5A5A5;
+    color: #EEEEEE;
+}

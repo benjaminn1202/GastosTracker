@@ -1,0 +1,138 @@
+.summarySection {
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+    display: none; /* grid */
+    grid-template-rows: 1fr;
+    position: relative;
+}
+.summarySection .subnav {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: #F08A5D;
+    border-bottom-left-radius: 1.875rem;
+    border-bottom-right-radius: 1.875rem;   
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0rem;
+    z-index: 1;
+}
+.summarySection .subnav h1 {
+    grid-row: 1;
+    justify-self: end;
+    font-size: 1.25rem;
+    font-family: 'prompt-light';
+    font-weight: 500;
+    color: #EEEEEE;
+    margin: 0.75rem 0.5rem 0.5rem 0.5rem;
+}
+.summarySection .subnav .active {
+    text-decoration: underline;
+    text-underline-offset: 0.60rem;
+    text-decoration-thickness: 0.2rem;
+}
+.summarySection .subnav img {
+    width: 4rem;
+    position: absolute;
+    bottom: -25%;
+    right: 1rem;
+}
+
+.summarySection .subnav .filterRange {
+    justify-self: start;
+}
+.summarySection .subnav .datepicker {
+    grid-column: 1/3;
+    font-weight: 300;
+}
+.summarySection .subnav h2 {
+    font-size: 1rem;
+    margin: 1rem 0 1rem 0;
+    font-family: 'prompt-light';
+    font-weight: 400;
+    color: #EEEEEE;
+    text-decoration: underline;
+    text-underline-offset: 0.15rem;
+}
+
+.summarySection .content {
+    width: 100%;
+    height: 100%;
+    display: block;
+    justify-items: center;
+    overflow-y: auto;
+}
+.summarySection .content::-webkit-scrollbar {
+    width: 0;
+}
+.summarySection .content .barGroup {
+    width: 100%;
+    margin-top: 7.5rem;
+    position: relative;
+    z-index: 0;
+    display: grid;
+    justify-items: center;
+}
+.summarySection .content .barGroup .bar {
+    margin-bottom: 0.60rem;
+    position: relative;
+    background-color: #AAAAAA;
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    width:90%;
+}
+.summarySection .content .barGroup .bar h1 {
+    font-size: 0.8rem;
+    color: #EEEEEE;
+    font-family: 'prompt-light';
+    display: inline-block;
+    margin: 0.40rem 0.30rem;
+    position: relative;
+    z-index: 0;
+    font-weight: 300;
+}
+.summarySection .content .barGroup .bar .barText2 {
+	justify-self: end;
+}
+.summarySection .content .barGroup .bar div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+.summarySection .content .barGroup #healthBarFluid {
+    background-color: #F35454;
+}
+.summarySection .content .barGroup #leisureBarFluid {
+    background-color: #8A2BE2;
+}
+.summarySection .content .barGroup #homeBarFluid {
+    background-color: #58ABAB;
+}
+.summarySection .content .barGroup #groceriesBarFluid {
+    background-color: #6B8E23;
+}
+.summarySection .content .barGroup #educationBarFluid {
+    background-color: #747ED5;
+}
+.summarySection .content .barGroup #transportationBarFluid {
+    background-color: #395FD2;
+}
+.summarySection .content .barGroup #familyBarFluid {
+    background-color: #FB95C8;
+}
+.summarySection .content .barGroup #fitnessBarFluid {
+    background-color: #FFA07A;
+}
+.summarySection .content .barGroup #othersBarFluid {
+    background-color: #808080;
+}
+.summarySection .content .barGroup #foodBarFluid {
+    background-color: #A8D271;
+}
