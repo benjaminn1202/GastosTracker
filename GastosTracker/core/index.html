@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GastosTracker</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/welcomeSection.css">
+    <link rel="stylesheet" href="styles/expensesSection.css">
+    <link rel="stylesheet" href="styles/tileMoreMenu.css">
+    <link rel="stylesheet" href="styles/expenseManipulationSection.css">
+    <link rel="stylesheet" href="styles/calendarPickerWindow.css">
+    <link rel="stylesheet" href="styles/summarySection.css">
+    <link rel="stylesheet" href="styles/aboutSection.css">
+    <link rel="stylesheet" href="styles/navigationMenu.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+
+    <!-- SCRIPTS -->    
+
+    <script type="text/javascript" src="scripts/app.js" defer></script>
+    <script type="text/javascript" src="scripts/database.js" defer></script>
+    <script type="text/javascript" src="scripts/navigation.js" defer></script>
+    <script type="text/javascript" src="scripts/expenseEntry.js" defer></script>
+    <script type="text/javascript" src="scripts/expenseEdit.js" defer></script>
+    <script type="text/javascript" src="scripts/expensesSection.js" defer></script>
+    <script type="text/javascript" src="scripts/summarySection.js" defer></script>
+    <script type="text/javascript" src="scripts/about.js" defer></script>
+</head>
+    <div class="container">
+    	<!-- TILE MORE MENU -->
+    	<div class="tileMoreMenu">
+    		<div class="dimmer"></div>
+    		<div class="container">
+				<div class="menuItem" id="toEdit">
+					<img src="resources/images/editIcon.svg">
+					<h1>Edit</h1>
+				</div>
+				<div class="menuItem" id="toDelete">
+					<img src="resources/images/trashIcon.svg">
+					<h1>Delete</h1>
+				</div>
+				<div class="menuItem" id="toDetails">
+					<img src="resources/images/about-inactive.svg">
+					<h1>Details</h1>
+				</div>
+    		</div>
+    	</div>
+    	
+        <!-- DAY EXPENSE CALENDER PICKER WINDOW -->
+        <div class="calendarPickerWindow dayExpenseCalendarPickerWindow">
+            <div class="window">
+                <h1>Date Picker</h1>
+                <input type="date" id="dayExpenseCalendarPickerInput">
+
+                <button id="dayExpenseCalendarPickerYesterdayButton">Yesterday</button>
+                <button id="dayExpenseCalendarPickerTodayButton">Today</button>
+
+                <button class="doneButton" id="dayExpenseCalendarPickerDoneButton">Done</button>
+                <button class="cancelButton" id="dayExpenseCalendarPickerCancelButton">Cancel</button>
+            </div>
+        </div>
+
+        <!-- RANGE EXPENSE CALENDER PICKER WINDOW -->
+        <div class="calendarPickerWindow rangeExpenseCalendarPickerWindow">
+            <div class="window">
+                <h1>Range Picker</h1>
+                <input class="datePickerFrom" type="date" id="rangeExpenseCalendarPickerFromInput">
+                <h2>to</h2>
+                <input  class="datePickerTo" type="date" id="rangeExpenseCalendarPickerToInput">
+
+                <button class="week" id="rangeExpenseCalendarPickerWeekButton">This Week</button>
+                <button class="month" id="rangeExpenseCalendarPickerMonthButton">This Month</button>
+                <button class="year" id="rangeExpenseCalendarPickerYearButton">This Year</button>
+                <button class="lastWweek" id="rangeExpenseCalendarPickerLastWeekButton">Last Week</button>
+                <button class="lastMonth" id="rangeExpenseCalendarPickerLastMonthButton">Last Month</button>
+                <button class="lastYear" id="rangeExpenseCalendarPickerLastYearButton">Last Year</button>
+
+                <button class="doneButton" id="rangeExpenseCalendarPickerDoneButton">Done</button>
+                <button class="cancelButton" id="rangeExpenseCalendarPickerCancelButton">Cancel</button>
+            </div>
+        </div>
+
+        <!-- DAY SUMMARY CALENDER PICKER WINDOW -->
+        <div class="calendarPickerWindow daySummaryCalendarPickerWindow">
+            <div class="window">
+                <h1>Date Picker</h1>
+                <input type="date" id="daySummaryCalendarPickerInput">
+
+                <button id="daySummaryCalendarPickerYesterdayButton">Yesterday</button>
+                <button id="daySummaryCalendarPickerTodayButton">Today</button>
+
+                <button class="doneButton" id="daySummaryCalendarPickerDoneButton">Done</button>
+                <button class="cancelButton" id="daySummaryCalendarPickerCancelButton">Cancel</button>
+            </div>
+        </div>
+
+        <!-- RANGE SUMMARY CALENDER PICKER WINDOW -->
+        <div class="calendarPickerWindow rangeSummaryCalendarPickerWindow">
+            <div class="window">
+                <h1>Range Picker</h1>
+                <input class="datePickerFrom" type="date" id="rangeSummaryCalendarPickerFromInput">
+                <h2>to</h2>
+                <input  class="datePickerTo" type="date" id="rangeSummaryCalendarPickerToInput">
+
+                <button class="week" id="rangeSummaryCalendarPickerWeekButton">This Week</button>
+                <button class="month" id="rangeSummaryCalendarPickerMonthButton">This Month</button>
+                <button class="year" id="rangeSummaryCalendarPickerYearButton">This Year</button>
+                <button class="lastWweek" id="rangeSummaryCalendarPickerLastWeekButton">Last Week</button>
+                <button class="lastMonth" id="rangeSummaryCalendarPickerLastMonthButton">Last Month</button>
+                <button class="lastYear" id="rangeSummaryCalendarPickerLastYearButton">Last Year</button>
+
+                <button class="doneButton" id="rangeSummaryCalendarPickerDoneButton">Done</button>
+                <button class="cancelButton" id="rangeSummaryCalendarPickerCancelButton">Cancel</button>
+            </div>
+        </div>
+        
+        <!-- NAVIGATION MENU -->
+        <nav>
+            <div class="dimmer"></div>
+            <div class="container">
+                <div class="navHeader">
+                    <img src="resources/images/app-icon1.svg">
+                    <h1>GastosTracker</h1>
+                </div>
+
+                <div class="navItem activeNavItem" id="expensesNavItem">
+                    <img src="resources/images/expenses-inactive.svg">
+                    <h1>Expenses</h1>
+                </div>
+                <div class="navItem" id="summaryNavItem">
+                    <img src="resources/images/dashboard-inactive.svg">
+                    <h1>Summary</h1>
+                </div>
+                <div class="navItem" id="aboutNavItem">
+                    <img src="resources/images/about-inactive.svg">
+                    <h1>About</h1>
+                </div>
+            </div>
+        </nav>
+
+        <!-- NAVIGATION -->
+        <div class="navigationBar1">
+            <img id="hamburgerButton" src="resources/images/icon-tribar.svg">
+            <h1 id="nav1h1">Expenses</h1>
+        </div>
+        <div class="navigationBar2">
+            <img id="entryBackButton" src="resources/images/icon-back.svg">
+            <h1>Expense Entry</h1>
+        </div>
+        <div class="navigationBar3">
+            <img id="editBackButton" src="resources/images/icon-back.svg">
+            <h1>Expense Edit</h1>
+        </div>
+
+        <!-- WELCOME SCREEN -->
+        <section class="fullscreenSection welcomeSection">
+            <img src="resources/images/splashImage.svg">
+            
+            <div class="welcomeMessageContainer">
+                <h1>Welcome To</h1>
+                <h2>GastosTracker</h2>
+                <p>Easily track your daily expenses.</p>
+                <button id="contBtn">Continue</button>
+            </div>
+        </section>
+
+        <!-- EXPENSES -->
+        <section class="partialscreenSection expensesSection">
+            <div class="subnav">
+                <h1 class="filterDay active" id="expensesDayFilter">Day</h1>
+                <h1 class="filterRange" id="expensesRangeFilter">Range</h1>
+                <h2 class="datepicker expensesDatePicker">December 2, 2003</h2>
+                <img id="expensesEntryButton" src="resources/images/expense-entry-button.svg">
+            </div>
+
+            <div class="content">
+            
+            </div>
+        </section>
+
+        <!-- EXPENSE ENTRY -->
+        <section class="partialscreenSection expenseEntrySection expenseManipulationSection">
+            <div class="content">
+                <label>Amount</label>
+                <input type="tel" id="entryAmountInput" placeholder="Enter Amount" maxlength="10">
+				
+				<label>Category</label>
+				<select id="entryCategoryInput">
+					<option value="" disabled selected>Select Category</option>
+					<option value="health">Health</option>
+					<option value="leisure">Leisure</option>
+					<option value="home">Home</option>
+					<option value="groceries">Groceries</option>
+					<option value="education">Education</option>
+					<option value="transportation">Transportation</option>
+					<option value="family">Family</option>
+					<option value="fitness">Fitness</option>
+					<option value="food">Food</option>
+					<option value="others">Others</option>
+				</select>
+				
+                <label>Date</label>
+                <input type="date" id="entryDateInput" placeholder="Select Date">
+                
+                <label>Time</label>
+                <input type="time" id="entryTimeInput">
+
+                <label>Remarks</label>
+                <input type="text" id="entryRemarksInput" placeholder="Enter Remarks">
+
+                <button id="entryButton">Add Entry</button>
+            </div>
+        </section>
+
+        <!-- EXPENSE EDIT -->
+        <section class="partialscreenSection expenseEditSection expenseManipulationSection">
+            <div class="content">
+      	    	<label>Amount</label>
+         		<input type="tel" id="editAmountInput" placeholder="Enter Amount" maxlength="10">
+            		
+      	    	<label>Category</label>
+            	<select id="editCategoryInput">
+           			<option value="" disabled selected>Select Category</option>
+            		<option value="health">Health</option>
+            		<option value="leisure">Leisure</option>
+            		<option value="home">Home</option>
+            		<option value="groceries">Groceries</option>
+            		<option value="education">Education</option>
+            		<option value="transportation">Transportation</option>
+            		<option value="family">Family</option>
+            		<option value="fitness">Fitness</option>
+            		<option value="food">Food</option>
+            		<option value="others">Others</option>
+            	</select>
+            
+            	<label>Date</label>
+            	<input type="date" id="editDateInput" placeholder="Select Date">
+            
+            	<label>Time</label>
+            	<input type="time" id="editTimeInput">
+            
+            	<label>Remarks</label>
+            	<input type="text" id="editRemarksInput" placeholder="Enter Remarks">
+            
+            	<button id="editButton">Save Changes</button>
+            </div>
+        </section>
+
+        <!-- SUMMARY -->
+        <section class="partialscreenSection summarySection">
+            <div class="subnav">
+                <h1 class="filterDay active" id="summaryDayFilter">Day</h1>
+                <h1 class="filterRange" id="summaryRangeFilter">Range</h1>
+                <h2 class="datepicker summaryDatePicker">December 2, 2003</h2>
+            </div>
+
+            <div class="content">
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="partialscreenSection aboutSection">
+            
+
+            <div class="content">
+                <div class="contentContainer">
+                	<h1>GastosTracker</h1>
+                    <p>Easily keep track of your daily expenses using your mobile phone.</p>
+                    <img class="aboutImage" src="resources/images/about-image.png">
+                    <h1>Developer</h1>
+                    <p>
+                    Hi! Benj here, the developer of this application. Here are my social links:
+                    </p>
+                    <div>
+                        <img id="github" src="resources/images/icon-github.svg">
+                        <img id="facebook" src="resources/images/icon-facebook.svg">
+                        <img id="instagram" src="resources/images/icon-instagram.svg">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'prompt-bold';
+    src: url('../core/resources/fonts/Prompt-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'prompt-semi-bold';
+    src: url('../core/resources/fonts/Prompt-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'prompt-regular';
+    src: url('../core/resources/fonts/prompt-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'prompt-light';
+    src: url('../core/resources/fonts/Prompt-Light.ttf');
+}

@@ -1,0 +1,68 @@
+.expenseManipulationSection {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0, 0%, 93%);
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.expenseEntrySection {
+    display: none; /* flex */
+}
+
+.expenseEditSection {
+    display: none; /* flex */
+}
+
+.expenseManipulationSection .content {
+    width: 90%;
+}
+
+.expenseManipulationSection .content label {
+    font-size: 1rem;
+    font-family: 'prompt-light';
+    color: #999999;
+    display: block;
+    margin-top: 1.25rem;
+}
+.expenseManipulationSection .content input, .expenseManipulationSection .content select {
+    font-size: 1rem;
+    font-family: 'prompt-light';
+    color: #AAAAAA;
+    background-color: #EEEEEE;
+    display: block;
+    margin-top: 0.5rem;
+    width: calc(100% - 1rem);
+    border-radius: 0.3125rem;
+    border: unset;
+    outline: unset;
+    padding: 0.5rem;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,25%);
+    position: relative;
+}
+.expenseManipulationSection .content select {
+	width: 100%;
+	color: #AAAAAA;
+}
+.expenseManipulationSection .content input {
+    z-index: 0;
+}
+.expenseManipulationSection .content input::placeholder {
+    color: #AAAAAA;
+}
+.expenseManipulationSection .content button {
+    width: 100%;
+    outline: unset;
+    border: unset;
+    background-color: #F08A5D;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    font-family: 'prompt-light';
+    color: #EEEEEE;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.3125rem;
+}
+.expenseManipulationSection .content button:active {
+    filter: brightness(0.80);
+}
